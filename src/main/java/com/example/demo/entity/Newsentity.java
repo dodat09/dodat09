@@ -1,34 +1,33 @@
-package entity;
+package com.example.demo.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name="new")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Newsentity extends Baseentity{
 	@Column(name="title")
 	private String title;
 	@Column(name="thumbnail")
 	private String thumbnail;
-	@Column(name="shortdecription")
+	@Column(name="shortdescription")
 	private String shortdescription;
 	@Column(name="content")
 	private String content;
-	@Column(name="categoryid")
-	private String categoryid;
-	public String getTitle() {
-		return title;
-	}
-	@ManyToOne
-	@JoinColumn(name="category_id")
-	private Categoryentity category;
 	
-	public void setTitle(String title) {
-		this.title = title;
-	}
+	
+	@ManyToOne
+	@JoinColumn(name="categoryid")
+	private Categoryentity category;
 	public String getThumbnail() {
 		return thumbnail;
 	}
@@ -47,20 +46,18 @@ public class Newsentity extends Baseentity{
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getCategoryid() {
-		return categoryid;
-	}
-	public void setCategoryid(String categoryid) {
-		this.categoryid = categoryid;
-	}
+
 	public Categoryentity getCategory() {
 		return category;
 	}
 	public void setCategory(Categoryentity category) {
 		this.category = category;
 	}
-
-	
-	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getTitle() {
+		return title;
+	}
 	
 }

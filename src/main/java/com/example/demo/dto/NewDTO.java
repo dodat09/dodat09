@@ -1,20 +1,20 @@
-package dto;
+package com.example.demo.dto;
 
-public class NewDTO extends INewDTO{
+public class NewDTO extends INewDTO<NewDTO>{
 	private String title;
 	private String content;
 	private String shortDescription;
 	private String categoryCode;
 	private String thumbnail;
-	
-	public NewDTO(String title, String content, String shortDescription, String categoryCode, String thumbnail) {
-		super();
-		this.title = title;
-		this.content = content;
-		this.shortDescription = shortDescription;
-		this.categoryCode = categoryCode;
-		this.thumbnail = thumbnail;
-	}
+//	
+//	public NewDTO(String title, String content, String shortDescription, String categoryCode, String thumbnail) {
+//		super();
+//		this.title = title;
+//		this.content = content;
+//		this.shortDescription = shortDescription;
+//		this.categoryCode = categoryCode;
+//		this.thumbnail = thumbnail;
+//	}
 
 	public String getTitle() {
 		return title;

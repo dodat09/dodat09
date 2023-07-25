@@ -1,4 +1,4 @@
-package dto;
+package com.example.demo.dto;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,7 +10,7 @@ public class INewDTO <T>{
 	private Date createdDate;
 	private String modifiedBy;
 	private Date modifiedDate;
-	private List<T> listResult = new ArrayList<>();
+	private List<T> listResult ;
 	
 	public Long getId() {
 		return id;

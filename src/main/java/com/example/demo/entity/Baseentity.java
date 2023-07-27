@@ -21,20 +21,19 @@ public abstract class Baseentity {
 	@Id //trong anto này thì nó có tích hợp notnull và primary sẵn rồi
 	@GeneratedValue(strategy= GenerationType.IDENTITY)//thuộc tính tự tăng
 	private Long id;
-    @Column
-    @CreatedBy
+    @Column(name="createby")
 	private String createdBy;
     
-    @Column
-    @CreatedDate
+    @Column(name="createdate")
+ 
 	private Date createDate;
     
-    @Column
-    @LastModifiedBy
+    @Column(name="modifiedby")
+   
 	private String modifiedBy;
  
-    @Column
-    @LastModifiedDate
+    @Column(name="modifieddate")
+    
 	private Date modifiedDate;
 
 	public Long getId() {
